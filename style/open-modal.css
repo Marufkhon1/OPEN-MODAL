@@ -1,0 +1,268 @@
+* {
+    transition: 1s;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main-div {
+    height: 50px;
+}
+
+li {
+    float: right;
+    list-style: none;
+    margin: 10px 10px 10px 10px;
+    font-family: fantasy;
+    color: cyan;
+}
+
+h1 {
+    margin: 25px auto;
+    text-align: center;
+}
+
+p {
+    font-family: cursive;
+    margin: 100px;
+    text-align: center;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    background-color: aqua;
+    border-radius: 34px;
+    margin: 10px 10px 10px 10px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 34px;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    width: 26px;
+    height: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.5s ease;
+    border-radius: 50%;
+}
+
+input:checked~.slider::before {
+    transform: translateX(26px);
+
+}
+
+input:checked~.slider {
+    background-color: blue;
+
+}
+
+li:hover {
+    cursor: pointer;
+    border-bottom: 3px solid violet;
+    color: blueviolet;
+}
+
+.dark-theme {
+    background-color: #111;
+    color: white;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+
+}
+
+.modal-content {
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-evenly;
+    background: radial-gradient(circle, red, green);
+    position: relative;
+}
+
+.modal-content input {
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px 5px;
+    background-color: darkgray;
+    margin-top: 5px;
+}
+
+#reg-input:focus {
+    background-color: #fff;
+}
+
+#pass-input:focus {
+    background-color: #fff;
+}
+
+.closeBtn {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: green;
+    width: 100%;
+    margin-bottom: 25px;
+    color: #fff;
+    border: none;
+    outline: none;
+    margin-top: 4px;
+    cursor: pointer;
+
+}
+
+.close {
+    position: absolute;
+    top: -20%;
+    right: -20%;
+    border-radius: 50%;
+    width: 10px;
+    height: 11px;
+    padding: 15px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: red;
+}
+
+.hidden {
+    display: none;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #444, #333, #222, #111, black);
+
+}
+
+.secret {
+    display: none;
+}
+
+hr {
+    margin: 20px auto;
+    background-color: snow;
+    height: 2px;
+    box-shadow: 2px 2px 3px 2px #42ba96, -2px -2px 3px 2px #42ba96;
+}
+
+.input-div input,
+.input-div button {
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.input-div {
+    text-align: center;
+}
+
+input[type="color"] {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 15px auto;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: greenyellow;
+}
+
+button {
+    cursor: pointer;
+    color: snow;
+    background-color: #42ba96;
+}
+
+button:hover {
+    box-shadow: inset 100px 0 green;
+}
+
+#all-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.card {
+    color: snow;
+    border-radius: 10px;
+    background-color: #6E72FC;
+    padding: 20px;
+}
+
+@media (max-width: 500px) {
+    #all-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    button {
+        display: block;
+        width: 100%;
+        margin: 5px auto;
+        cursor: pointer;
+        color: snow;
+        background-color: #42ba96;
+    }
+
+    button:hover {
+        background-color: green;
+    }
+}
+
+@media (min-width: 500px) {
+    #all-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 7px;
+    }
+}
+
+@media (min-width: 750px) {
+    #all-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+}

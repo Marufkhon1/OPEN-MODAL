@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPEN MODAL</title>
+    <link rel="stylesheet" href="/style/open-modal.css">
+</head>
+
+<body>
+    <div class="main-div">
+        <div>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+            <li class="log-in">Login</li>
+            <li class="register">Register</li>
+        </div>
+        <div class="middle-menu">
+            <h1>Please, Sign-in to continue</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius nulla eget leo auctor vehicula.
+                Praesent non lorem nec felis mattis laoreet. Morbi consectetur sed sapien eu congue. Etiam erat nisl,
+                rutrum
+                et eleifend ac, convallis quis elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+                posuere cubilia curae; Praesent vestibulum metus id mi egestas ornare. In pretium, metus ut vestibulum
+                condimentum, justo ligula blandit leo, ut scelerisque velit quam eget massa. Aenean ac ipsum porta lacus
+                pharetra convallis sit amet a velit. Sed non eleifend sapien. Aliquam hendrerit fermentum convallis.
+                Morbi
+                dignissim mauris ut nisl malesuada cursus.</p>
+        </div>
+
+
+
+    </div>
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close">
+                &times;
+            </span>
+            <input id="reg-name" type="text" placeholder="UserName">
+            <input id="reg-pass" type="password" placeholder="Password"><br>
+            <button class="closeBtn">
+                LogIn
+            </button>
+        </div>
+
+    </div>
+    <div class="main secret">
+        <h1 class="heading" style="text-align: center; color: white;"></h1>
+        <div class="input-div">
+            <input class="card-name" type="text">
+            <button onclick="create()">Create</button>
+            <hr width="30%">
+        </div>
+        <div id="all-cards">
+            <div class="card">
+                <h2>Card 1</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ullam corporis molestiae officiis
+                    repudiandae repellendus.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script src="/js/open-modal.js">
+
+</script>
+</body>
+
+</html>
